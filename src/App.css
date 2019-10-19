@@ -1,0 +1,16 @@
+.demo {
+  min-height: 100vh;
+  min-width: 100vw;
+  margin: 0;
+  background: #f1f1f1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+
+.gg-video-player {
+  width: 600px;
+  height: 338px;
+  background: gold;
+}
