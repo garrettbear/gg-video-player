@@ -4,6 +4,7 @@ const video = player.querySelector(".viewer");
 const progress = player.querySelector(".progress");
 const progressBar = player.querySelector(".progress__filled");
 const toggle = player.querySelector(".toggle");
+const full = player.querySelector(".full");
 const skipButtons = player.querySelectorAll("[data-skip]");
 const ranges = player.querySelectorAll(".player__slider");
 
@@ -11,6 +12,21 @@ const ranges = player.querySelectorAll(".player__slider");
 function togglePlay() {
   const method = video.paused ? "play" : "pause";
   video[method]();
+}
+
+function fullscreen() {
+  if (video.requestFullscreen) {
+    video.requestFullscreen();
+  } else if (video.mozRequestFullScreen) {
+    /* Firefox */
+    video.mozRequestFullScreen();
+  } else if (video.webkitRequestFullscreen) {
+    /* Chrome, Safari and Opera */
+    video.webkitRequestFullscreen();
+  } else if (video.msRequestFullscreen) {
+    /* IE/Edge */
+    video.msRequestFullscreen();
+  }
 }
 
 function updateButton() {
@@ -44,6 +60,7 @@ video.addEventListener("pause", updateButton);
 video.addEventListener("timeupdate", handleProgress);
 
 toggle.addEventListener("click", togglePlay);
+full.addEventListener("click", fullscreen);
 skipButtons.forEach(button => button.addEventListener("click", skip));
 ranges.forEach(range => range.addEventListener("change", handleRangeUpdate));
 ranges.forEach(range => range.addEventListener("mousemove", handleRangeUpdate));
