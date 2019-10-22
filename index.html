@@ -7,38 +7,87 @@
   </head>
   <body>
     <div class="player">
-      <video class="player__video viewer" src="652333414.mp4"></video>
+      <video
+        class="player__video viewer"
+        autoplay
+        muted
+        src="652333414.mp4"
+      ></video>
 
       <div class="player__controls">
+        <div class="top">
+          <div class="top--left">
+            <div class="ad">Ad 0:32</div>
+            <div class="volume">Mute</div>
+          </div>
+          <div class="top--right">
+            <button data-skip="10" class="skip__button">Skip</button>
+          </div>
+        </div>
         <div class="progress">
           <div class="progress__filled"></div>
         </div>
-        <button class="player__button toggle" title="Toggle Play">►</button>
-        <button class="player__button full" title="Toggle Fullscreen">
-          full
-        </button>
-        <input
-          type="range"
-          name="volume"
-          class="player__slider"
-          min="0"
-          max="1"
-          step="0.05"
-          value="1"
-        />
-        <input
-          type="range"
-          name="playbackRate"
-          class="player__slider"
-          min="0.5"
-          max="2"
-          step="0.1"
-          value="1"
-        />
-        <button data-skip="-10" class="player__button">« 10s</button>
-        <button data-skip="25" class="player__button">25s »</button>
+        <div class="bottom">
+          <div class="bottom--left">
+            Left
+          </div>
+          <div class="bottom--right">
+            <button
+              class="player__button full"
+              title="Toggle Fullscreen"
+            ></button>
+          </div>
+          <!-- <div class="bottom--left">
+            <button class="player__button toggle" title="Toggle Play">►</button>
+            <input
+              type="range"
+              name="volume"
+              class="player__slider"
+              min="0"
+              max="1"
+              step="0.05"
+              value="1"
+            />
+          </div>
+          <div class="bottom--right">
+            <button class="player__button full" title="Toggle Fullscreen">
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                viewBox="0 0 150.3401 150.3401"
+              >
+                <title>expand</title>
+                <g id="Layer_2" data-name="Layer 2">
+                  <g id="Layer_1-2" data-name="Layer 1">
+                    <g id="expand">
+                      <polygon
+                        class="cls-1"
+                        points="150.34 52.252 137.506 52.252 137.506 12.834 98.088 12.834 98.088 0 150.34 0 150.34 52.252"
+                      />
+                      <polygon
+                        class="cls-1"
+                        points="150.34 150.34 98.088 150.34 98.088 137.506 137.506 137.506 137.506 98.088 150.34 98.088 150.34 150.34"
+                      />
+                      <polygon
+                        class="cls-1"
+                        points="52.252 150.34 0 150.34 0 98.088 12.834 98.088 12.834 137.506 52.252 137.506 52.252 150.34"
+                      />
+                      <polygon
+                        class="cls-1"
+                        points="12.834 52.252 0 52.252 0 0 52.252 0 52.252 12.834 12.834 12.834 12.834 52.252"
+                      />
+                    </g>
+                  </g>
+                </g>
+              </svg>
+            </button>
+          </div> -->
+        </div>
       </div>
     </div>
+
+    <br />
+    <br />
+    <br />
 
     <script src="scripts.js"></script>
   </body>

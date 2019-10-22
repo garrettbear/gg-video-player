@@ -9,25 +9,25 @@ html {
 }
 
 body {
-  margin: 0;
+  margin: 0 auto;
+  max-width: 600px;
   padding: 0;
-  display: flex;
-  background: #f1f1f1;
+  background: #ccc;
   min-height: 100vh;
   background-size: cover;
-  align-items: center;
-  justify-content: center;
 }
+
+
 
 .player {
   box-sizing: border-box;
   border: 5px solid red;
   position: relative;
   font-size: 0;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
   overflow: hidden;
 }
 
-/* This css is only applied when fullscreen is active. */
 .player:fullscreen {
   max-width: none;
   width: 100%;
@@ -51,17 +51,18 @@ body {
   outline: 0;
   padding: 0;
   cursor: pointer;
-  max-width: 50px;
 }
 
 
 .player__button.full {
-  background: red;
+  background: transparent;
   background-image: url(./icons/expand.svg);
   background-repeat: no-repeat;
+  height: 18px;
+  width: 19px;
+  margin: 6px;
+
 }
-
-
 
 .player__button:focus {
   border-color: #FFCE00;
@@ -79,24 +80,82 @@ body {
   width: 100%;
   height: 70px;
   max-height: 70px;
-  transform: translateY(100%) translateY(-5px);
+  transform: translateY(100%) translateY(-39px);
   transition: all .3s;
   flex-wrap: wrap;
-  background: rgba(0, 0, 0, 0.5);
-  background: linear-gradient(180deg, rgba(255, 255, 255, 0) 22%, rgba(0, 0, 0, 0.5480567226890756) 99%);
+  background: transparent;
 }
 
 .player:hover .player__controls {
   transform: translateY(0);
+  background: rgba(0, 0, 0, 0.5);
+  background: linear-gradient(180deg, rgba(255, 255, 255, 0) 22%, rgba(0, 0, 0, 0.5480567226890756) 99%);
 }
 
 .player:hover .progress {
-  height: 5px;
+  height: 3px;
   margin: 0 6px;
 }
 
 .player__controls>* {
   flex: 1;
+}
+
+.top {
+  flex: 1;
+  /* background: red; */
+  width: 100%;
+  max-height: 36px;
+  height: 36px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.top--left {
+  display: flex;
+}
+
+.ad {
+  font-size: 11px;
+  font-weight: lighter;
+  color: #ffffff;
+  opacity: .6;
+  margin: 6px;
+}
+
+
+.player:hover .ad {
+  opacity: 1;
+}
+
+.volume {
+  /* top volume */
+  font-size: 11px;
+  font-weight: lighter;
+  color: #ffffff;
+  opacity: .6;
+  margin: 6px;
+}
+
+.skip__button {
+  height: 24px;
+  min-width: 60px;
+  font-size: 13px;
+  font-weight: normal;
+  color: #ffffff;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  margin: 6px;
+  background: #1f1f1f;
+  border: 1px solid #bababa;
+  cursor: pointer;
+  opacity: .5;
+  transition: all .3s;
+}
+
+.skip__button:hover {
+  opacity: 1;
 }
 
 .progress {
@@ -116,6 +175,42 @@ body {
   flex: 0;
   flex-basis: 0%;
 }
+
+
+.bottom {
+  display: flex;
+  justify-content: space-between;
+  height: 30px;
+  background: purple;
+  font-size: 10px;
+}
+
+.bottom--left {
+  display: flex;
+  background: maroon;
+}
+
+.bottom--right {
+  height: 30px;
+  background: mediumaquamarine;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 input[type=range] {
@@ -171,4 +266,9 @@ input[type=range]::-moz-range-thumb {
   border-radius: 50px;
   background: #FFCE00;
   cursor: pointer;
+}
+
+
+svg.cls-1 {
+  fill: purple;
 }
