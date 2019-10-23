@@ -64,6 +64,17 @@ body {
 
 }
 
+
+.player__button.toggle {
+  background: transparent;
+  background-image: url(./icons/play.svg);
+  background-repeat: no-repeat;
+  height: 18px;
+  width: 19px;
+  margin: 6px;
+
+}
+
 .player__button.pause {
   background: transparent;
   background-image: url(./icons/pause.svg);
@@ -71,8 +82,17 @@ body {
   height: 18px;
   width: 19px;
   margin: 6px;
-
 }
+
+.player__button.mute {
+  background: transparent;
+  background-image: url(./icons/mute.svg);
+  background-repeat: no-repeat;
+  height: 18px;
+  width: 19px;
+  margin: 6px;
+}
+
 
 .player__button:focus {
   border-color: #FFCE00;
@@ -124,28 +144,28 @@ body {
 
 .top--left {
   display: flex;
+  align-items: center;
+  opacity: .6;
+  transition: all .3 ease-out;
+  width: 100%;
 }
 
 .ad {
   font-size: 11px;
   font-weight: lighter;
   color: #ffffff;
-  opacity: .6;
   margin: 6px;
 }
 
 
-.player:hover .ad {
-  opacity: 1;
+.player:hover .top--left {
+  display: none;
 }
 
-.volume {
-  /* top volume */
-  font-size: 11px;
-  font-weight: lighter;
-  color: #ffffff;
-  opacity: .6;
-  margin: 6px;
+.top--right {
+  display: flex;
+  width: 100%;
+  justify-content: flex-end;
 }
 
 .skip__button {
@@ -191,21 +211,31 @@ body {
   display: flex;
   justify-content: space-between;
   height: 30px;
-  background: purple;
   font-size: 10px;
 }
 
 .bottom--left {
   display: flex;
-  background: maroon;
 }
 
 .bottom--right {
   height: 30px;
-  background: mediumaquamarine;
 }
 
 
+
+.timestamp {
+  display: flex;
+  align-items: center;
+  color: #ffffff;
+  font-size: 11px;
+  padding: 6px;
+
+}
+
+.timebreak {
+  margin: 0 3px;
+}
 
 
 

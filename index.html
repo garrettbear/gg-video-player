@@ -17,7 +17,7 @@
         <div class="top">
           <div class="top--left">
             <div class="ad">Ad 0:32</div>
-            <div class="volume">Mute</div>
+            <button class="player__button mute" title="Volume"></button>
           </div>
           <div class="top--right">
             <button data-skip="10" class="skip__button">Skip</button>
@@ -28,11 +28,17 @@
         </div>
         <div class="bottom">
           <div class="bottom--left">
-              <div class="bottom--right">
-                  <button
-                    class="player__button pause toggle"
-                    title="Pause Video"
-                  ></button>
+            <div class="timestamp">
+              <div class="currentTime">
+                0:00
+              </div>
+              <div class="timebreak">/</div>
+              <div class="totalTime">
+                20:00
+              </div>
+            </div>
+            <button class="player__button toggle" title="Pause Video"></button>
+            <button class="player__button mute" title="Volume"></button>
           </div>
           <div class="bottom--right">
             <button
