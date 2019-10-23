@@ -30,9 +30,10 @@ function fullscreen() {
 }
 
 function updateButton() {
-  const icon = this.paused ? "►" : "❚";
-  console.log(icon);
-  toggle.textContent = icon;
+  // const icon = this.paused ? "►" : "❚";
+  // console.log(icon);
+  toggle.classList.toggle("pause");
+  // toggle.textContent = icon;
 }
 
 function skip() {

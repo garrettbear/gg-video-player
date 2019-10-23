@@ -64,6 +64,16 @@ body {
 
 }
 
+.player__button.pause {
+  background: transparent;
+  background-image: url(./icons/pause.svg);
+  background-repeat: no-repeat;
+  height: 18px;
+  width: 19px;
+  margin: 6px;
+
+}
+
 .player__button:focus {
   border-color: #FFCE00;
 }
@@ -271,4 +281,9 @@ input[type=range]::-moz-range-thumb {
 
 svg.cls-1 {
   fill: purple;
+}
+
+
+.hi {
+  background: pink !important;
 }
