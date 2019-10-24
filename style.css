@@ -15,6 +15,9 @@ body {
   background: #ccc;
   min-height: 100vh;
   background-size: cover;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 
@@ -200,11 +203,24 @@ body {
 }
 
 .progress__filled {
+  position: relative;
   width: 0%;
   background: #FFCE00;
   flex: 0;
   flex-basis: 0%;
 }
+
+.progress__filled::after {
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 10px;
+  height: 10px;
+  border-radius: 10px;
+  background: red;
+}
+
+
 
 
 .bottom {
@@ -228,7 +244,7 @@ body {
   display: flex;
   align-items: center;
   color: #ffffff;
-  font-size: 11px;
+  font-size: 10px;
   padding: 6px;
 
 }
