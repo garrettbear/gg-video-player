@@ -1,0 +1,148 @@
+.gg-video {
+    box-sizing: border-box;
+    position: relative;
+    font-size: 11px;
+    color: #ffffff;
+    font-weight: lighter;
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    overflow: hidden;
+    border: 5px solid greenyellow;
+    margin: 10px 0;
+}
+
+.gg-video:fullscreen {
+    max-width: none;
+    width: 100%;
+}
+
+.gg-video:-webkit-full-screen {
+    max-width: none;
+    width: 100%;
+}
+
+.gg-video--viewer {
+    width: 100%;
+}
+
+.gg-video--controls {
+    position: absolute;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    height: 70px;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    background: red;
+}
+
+.gg-video:hover .gg-video--controls {
+    /* transform: translateY(0); */
+    background: rgba(0, 0, 0, 0.5);
+    background: linear-gradient(180deg, rgba(255, 255, 255, 0) 22%, rgba(0, 0, 0, 0.5480567226890756) 99%);
+}
+
+
+.gg-video--top,
+.gg-video--middle,
+.gg-video--bottom {
+    width: 100%;
+    /* background: gold; */
+}
+
+
+.gg-video--top,
+.gg-video--middle,
+.gg-video--bottom {
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+}
+
+.gg-video--top {
+    background: gold;
+    height: 36px;
+}
+
+.gg-video--bottom {
+    background: maroon;
+    height: 30px;
+}
+
+
+
+.gg-video--item-left,
+.gg-video--item-right {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    width: 100%;
+}
+
+.gg-video--item-right {
+    justify-content: flex-end;
+}
+
+.gg-video--ad-timestamp {
+    margin: 6px;
+    opacity: .5;
+    user-select: none;
+    -webkit-user-select: none;
+    -khtml-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+}
+
+.gg-video:hover .gg-video--ad-timestamp {
+    opacity: 1;
+}
+
+
+.gg-video--button-skip {
+    height: 24px;
+    min-width: 60px;
+    font-size: 13px;
+    font-weight: normal;
+    color: #ffffff;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    margin: 6px;
+    background: #1f1f1f;
+    border: 1px solid #bababa;
+    cursor: pointer;
+    opacity: .5;
+    transition: all .3s;
+}
+
+.gg-video--button-skip:hover {
+    opacity: 1;
+}
+
+
+.gg-video--button-icon {
+    background: none;
+    background-repeat: no-repeat;
+    border: 0;
+    line-height: 1;
+    color: white;
+    outline: 0;
+    padding: 0;
+    cursor: pointer;
+}
+
+
+
+
+.gg-video--button-icon.mute {
+    background-image: url(./icons/mute.svg);
+    height: 18px;
+    width: 19px;
+    margin: 6px;
+}
+
+
+.gg-video--volume {
+    background: red;
+    display: flex;
+    flex-direction: row;
+}

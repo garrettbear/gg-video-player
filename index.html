@@ -4,8 +4,51 @@
     <meta charset="UTF-8" />
     <title>HTML Video Player</title>
     <link rel="stylesheet" href="style.css" />
+    <link rel="stylesheet" href="gg-style.css" />
   </head>
   <body>
+    <div class="gg-video">
+      <video
+        src="652333414.mp4"
+        autoplay
+        muted
+        class="gg-video--viewer"
+      ></video>
+      <div class="gg-video--controls">
+        <div class="gg-video--top">
+          <div class="gg-video--item-left">
+            <div class="gg-video--ad-timestamp">
+              Ad 0:32
+            </div>
+            <div class="gg-video--volume">
+              <button class="gg-video--button-icon mute"></button>
+              <div class="gg-video--volume-control">
+                <input
+                  type="range"
+                  name="volume"
+                  class="player__slider"
+                  min="0"
+                  max="1"
+                  step="0.05"
+                  value="1"
+                />
+              </div>
+            </div>
+          </div>
+          <div class="gg-video--item-right">
+            <button class="gg-video--button-skip">skip</button>
+          </div>
+        </div>
+        <div class="gg-video--middle">
+          Middle
+        </div>
+        <div class="gg-video--bottom">
+          <div class="gg-video--item-left">Bottom Left</div>
+          <div class="gg-video--item-right">Bottom Right</div>
+        </div>
+      </div>
+    </div>
+
     <div class="player">
       <video
         class="player__video viewer"
