@@ -17,7 +17,7 @@
       <div class="gg-video--controls">
         <div class="gg-video--top">
           <div class="gg-video--item-left">
-            <div class="gg-video--ad-timestamp">
+            <div class="gg-video--timestamp-ad">
               Ad 0:32
             </div>
             <div class="gg-video--volume">
@@ -40,11 +40,44 @@
           </div>
         </div>
         <div class="gg-video--middle">
-          Middle
+          <div class="gg-video--progress">
+            <div class="gg-video--progress-bar progress">
+              <div class="gg-video--progress-filled progress__filled"></div>
+            </div>
+          </div>
         </div>
         <div class="gg-video--bottom">
-          <div class="gg-video--item-left">Bottom Left</div>
-          <div class="gg-video--item-right">Bottom Right</div>
+          <div class="gg-video--item-left">
+            <div class="gg-video--timestamp">
+              <div class="gg-video--timestamp-current">
+                0:56
+              </div>
+              <div class="gg-video--timestamp-break">
+                /
+              </div>
+              <div class="gg-video--timestamp-total">
+                09:33
+              </div>
+            </div>
+            <button class="gg-video--button-icon play"></button>
+            <div class="gg-video--volume">
+              <button class="gg-video--button-icon mute"></button>
+              <div class="gg-video--volume-control">
+                <input
+                  type="range"
+                  name="volume"
+                  class="player__slider"
+                  min="0"
+                  max="1"
+                  step="0.05"
+                  value="1"
+                />
+              </div>
+            </div>
+          </div>
+          <div class="gg-video--item-right">
+            <button class="gg-video--button-icon expand"></button>
+          </div>
         </div>
       </div>
     </div>
