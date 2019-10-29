@@ -6,8 +6,6 @@
     font-weight: lighter;
     font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
     overflow: hidden;
-    border: 5px solid greenyellow;
-    margin: 10px 0;
 }
 
 .gg-video:fullscreen {
@@ -20,34 +18,10 @@
     width: 100%;
 }
 
-.gg-video--viewer {
-    width: 100%;
-}
-
-.gg-video--controls {
-    position: absolute;
-    left: 0;
-    right: 0;
-    bottom: 0;
-    height: 70px;
-    display: flex;
-    flex-direction: column;
-    justify-content: flex-end;
-    background: red;
-}
-
-.gg-video:hover .gg-video--controls {
-    /* transform: translateY(0); */
-    background: rgba(0, 0, 0, 0.5);
-    background: linear-gradient(180deg, rgba(255, 255, 255, 0) 22%, rgba(0, 0, 0, 0.5480567226890756) 99%);
-}
-
-
 .gg-video--top,
 .gg-video--middle,
 .gg-video--bottom {
     width: 100%;
-    /* background: gold; */
 }
 
 
@@ -60,12 +34,10 @@
 }
 
 .gg-video--top {
-    background: gold;
     height: 36px;
 }
 
 .gg-video--bottom {
-    background: maroon;
     height: 30px;
 }
 
@@ -83,11 +55,32 @@
     justify-content: flex-end;
 }
 
+.gg-video--viewer {
+    width: 100%;
+}
+
+.gg-video--controls {
+    position: absolute;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    height: 70px;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    transform: translateY(100%) translateY(-39px);
+    transition: all .3s;
+    background: transparent;
+}
+
+
 .gg-video--timestamp {
     display: flex;
     flex-direction: row;
     font-weight: normal;
     margin: 6px;
+    opacity: .8;
 }
 
 .gg-video--timestamp-break {
@@ -140,7 +133,6 @@
     padding: 0;
     cursor: pointer;
     opacity: .7;
-    transition: all .3s ease-in-out;
 }
 
 .gg-video--button-icon:hover {
@@ -150,6 +142,27 @@
 
 .gg-video--button-icon.mute {
     background-image: url(./icons/mute.svg);
+    height: 18px;
+    width: 19px;
+    margin: 6px;
+}
+
+.gg-video--button-icon.low {
+    background-image: url(./icons/low-volume.svg);
+    height: 18px;
+    width: 19px;
+    margin: 6px;
+}
+
+.gg-video--button-icon.medium {
+    background-image: url(./icons/med-volume.svg);
+    height: 18px;
+    width: 19px;
+    margin: 6px;
+}
+
+.gg-video--button-icon.high {
+    background-image: url(./icons/high-volume.svg);
     height: 18px;
     width: 19px;
     margin: 6px;
@@ -217,7 +230,7 @@
 }
 
 div.gg-video--progress-filled::after {
-    content: "000";
+    content: " ";
     position: absolute;
     right: -6px;
     top: -3px;
@@ -234,4 +247,93 @@ div.gg-video--progress-filled::after {
 
 div.gg-video--progress-filled:hover::after {
     opacity: 1;
+}
+
+
+.gg-video--input-range {
+    -webkit-appearance: none;
+    background: transparent;
+    width: 100%;
+    max-width: 80px;
+    margin: 0 5px;
+}
+
+.gg-video--input-range:focus {
+    outline: none;
+}
+
+.gg-video--input-range::-webkit-slider-runnable-track {
+    width: 100%;
+    max-width: 80px;
+    height: 3px;
+    cursor: pointer;
+    box-shadow: 1px 1px 1px rgba(0, 0, 0, 0), 0 0 1px rgba(13, 13, 13, 0);
+    background: rgba(255, 255, 255, 0.8);
+    border-radius: 1.3px;
+    border: 0.2px solid rgba(1, 1, 1, 0);
+}
+
+/* .gg-video--input-range:focus::-webkit-slider-runnable-track {
+    background: #bada55;
+    outline: none;
+  } */
+
+.gg-video--input-range::-webkit-slider-thumb {
+    height: 9px;
+    width: 9px;
+    border-radius: 50px;
+    background: #ffffff;
+    cursor: pointer;
+    -webkit-appearance: none;
+    margin-top: -3px;
+    box-shadow: 0 0 2px rgba(0, 0, 0, 0.2);
+}
+
+.gg-video--input-range::-moz-range-track {
+    width: 100%;
+    max-width: 80px;
+    height: 3px;
+    cursor: pointer;
+    box-shadow: 1px 1px 1px rgba(0, 0, 0, 0), 0 0 1px rgba(13, 13, 13, 0);
+    background: rgba(0, 0, 0, 0.5);
+    border-radius: 1.3px;
+    border: 0.2px solid rgba(1, 1, 1, 0);
+}
+
+.gg-video--input-range::-moz-range-thumb {
+    box-shadow: 0 0 0 rgba(0, 0, 0, 0), 0 0 0 rgba(13, 13, 13, 0);
+    height: 9px;
+    width: 9px;
+    border: none;
+    border-radius: 50px;
+    background: #ffffff;
+    cursor: pointer;
+}
+
+
+
+
+
+/* Player Overrides */
+
+/* Standard Video Player */
+.gg-video:hover .gg-video--controls {
+    transform: translateY(0);
+    background: rgb(0, 0, 0);
+    background: linear-gradient(0deg, rgba(0, 0, 0, 0.5) 0%, rgba(0, 0, 0, 0) 100%);
+}
+
+
+.gg-video:hover .gg-video--progress-bar {
+    margin: 0 6px;
+}
+
+
+.gg-video:hover .gg-video--top>.gg-video--item-left {
+    display: none;
+}
+
+
+.gg-video--skip-no>.gg-video--button-skip {
+    display: none;
 }

@@ -1,12 +1,12 @@
 /* Get Our Elements */
-const player = document.querySelector(".player");
-const video = player.querySelector(".viewer");
-const progress = player.querySelector(".progress");
-const progressBar = player.querySelector(".progress__filled");
-const toggle = player.querySelector(".toggle");
-const full = player.querySelector(".full");
+const player = document.querySelector(".gg-video");
+const video = player.querySelector(".gg-video--viewer");
+const progress = player.querySelector(".gg-video--progress-bar");
+const progressBar = player.querySelector(".gg-video--progress-filled");
+const toggle = player.querySelector(".gg-video--button-toggle");
+const full = player.querySelector(".expand");
 const skipButtons = player.querySelectorAll("[data-skip]");
-const ranges = player.querySelectorAll(".player__slider");
+const ranges = player.querySelectorAll(".gg-video--volume-control-slider");
 
 /* Build out functions */
 function togglePlay() {

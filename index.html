@@ -7,13 +7,8 @@
     <link rel="stylesheet" href="gg-style.css" />
   </head>
   <body>
-    <div class="gg-video">
-      <video
-        src="652333414.mp4"
-        autoplay
-        muted
-        class="gg-video--viewer"
-      ></video>
+    <div class="gg-video gg-video--skip-no">
+      <video src="652333414.mp4" autoplay class="gg-video--viewer"></video>
       <div class="gg-video--controls">
         <div class="gg-video--top">
           <div class="gg-video--item-left">
@@ -26,7 +21,7 @@
                 <input
                   type="range"
                   name="volume"
-                  class="player__slider"
+                  class="gg-video--volume-control-slider gg-video--input-range"
                   min="0"
                   max="1"
                   step="0.05"
@@ -36,13 +31,13 @@
             </div>
           </div>
           <div class="gg-video--item-right">
-            <button class="gg-video--button-skip">skip</button>
+            <button data-skip="10" class="gg-video--button-skip">skip</button>
           </div>
         </div>
         <div class="gg-video--middle">
           <div class="gg-video--progress">
-            <div class="gg-video--progress-bar progress">
-              <div class="gg-video--progress-filled progress__filled"></div>
+            <div class="gg-video--progress-bar">
+              <div class="gg-video--progress-filled"></div>
             </div>
           </div>
         </div>
@@ -59,14 +54,16 @@
                 09:33
               </div>
             </div>
-            <button class="gg-video--button-icon play"></button>
+            <button
+              class="gg-video--button-icon gg-video--button-toggle play"
+            ></button>
             <div class="gg-video--volume">
               <button class="gg-video--button-icon mute"></button>
               <div class="gg-video--volume-control">
                 <input
                   type="range"
                   name="volume"
-                  class="player__slider"
+                  class="gg-video--volume-control-slider gg-video--input-range"
                   min="0"
                   max="1"
                   step="0.05"
@@ -81,65 +78,6 @@
         </div>
       </div>
     </div>
-
-    <div class="player">
-      <video
-        class="player__video viewer"
-        autoplay
-        muted
-        src="652333414.mp4"
-      ></video>
-      <div class="player__controls">
-        <div class="top">
-          <div class="top--left">
-            <div class="ad">Ad 0:32</div>
-            <button class="player__button mute" title="Volume"></button>
-          </div>
-          <div class="top--right">
-            <button data-skip="10" class="skip__button">Skip</button>
-          </div>
-        </div>
-        <div class="progress">
-          <div class="progress__filled"></div>
-        </div>
-        <div class="bottom">
-          <div class="bottom--left">
-            <div class="timestamp">
-              <div class="currentTime">
-                0:00
-              </div>
-              <div class="timebreak">/</div>
-              <div class="totalTime">
-                20:00
-              </div>
-            </div>
-            <button class="player__button toggle" title="Pause Video"></button>
-            <button class="player__button mute" title="Volume"></button>
-            <div class="volume-control">
-              <input
-                type="range"
-                name="volume"
-                class="player__slider"
-                min="0"
-                max="1"
-                step="0.05"
-                value="1"
-              />
-            </div>
-          </div>
-          <div class="bottom--right">
-            <button
-              class="player__button full"
-              title="Toggle Fullscreen"
-            ></button>
-          </div>
-        </div>
-      </div>
-    </div>
-
-    <br />
-    <br />
-    <br />
 
     <script src="scripts.js"></script>
   </body>
