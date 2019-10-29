@@ -385,16 +385,16 @@ div.gg-video--progress-filled:hover::after {
 
 
 
-/* ISEV Video */
-/* Add class gg-video--isev */
-/* Example: <div class="gg-video  gg-video--isev"> */
+/* Video Volume Only w/ extra padding - ie ISEV Video */
+/* Add class gg-video--small-volume-only */
+/* Example: <div class="gg-video  gg-video--small-volume-only"> */
 
-.gg-video.gg-video--isev .gg-video--top>.gg-video--item-left {
+.gg-video.gg-video--small-volume-only .gg-video--top>.gg-video--item-left {
     display: inherit;
 }
 
 
-.gg-video--isev .gg-video--controls {
+.gg-video--small-volume-only .gg-video--controls {
     position: absolute;
     left: 20px;
     bottom: 20px;
@@ -406,20 +406,20 @@ div.gg-video--progress-filled:hover::after {
     transition: all .3s;
 }
 
-.gg-video:hover.gg-video--isev .gg-video--controls {
+.gg-video:hover.gg-video--small-volume-only .gg-video--controls {
     transform: translateY(0);
     background: none;
 }
 
-.gg-video--isev .gg-video--middle,
-.gg-video--isev .gg-video--bottom {
+.gg-video--small-volume-only .gg-video--middle,
+.gg-video--small-volume-only .gg-video--bottom {
     display: none;
 }
 
-.gg-video--isev .gg-video--timestamp-ad {
+.gg-video--small-volume-only .gg-video--timestamp-ad {
     display: none;
 }
 
-.gg-video:hover.gg-video--isev .gg-video--top>.gg-video--item-left {
+.gg-video:hover.gg-video--small-volume-only .gg-video--top>.gg-video--item-left {
     display: inherit;
 }
