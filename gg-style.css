@@ -331,7 +331,19 @@ div.gg-video--progress-filled:hover::after {
 }
 
 
-.gg-video:hover .gg-video--top>.gg-video--item-left {
+.gg-video .gg-video--top>.gg-video--item-left {
+    display: none;
+}
+
+
+
+/* Show Ad Unit Countdown Timestamp & Volume  */
+/* Example: <div class="gg-video  gg-video--ad"> */
+.gg-video--ad .gg-video--top>.gg-video--item-left {
+    display: inherit;
+}
+
+.gg-video:hover.gg-video--ad .gg-video--top>.gg-video--item-left {
     display: none;
 }
 
@@ -347,7 +359,7 @@ div.gg-video--progress-filled:hover::after {
 
 /* Ad Video w/ Ad Countdown & Volume - no scrub & no play pause */
 /* Add class gg-video--no-scrub */
-/* Example: <div class="gg-video  gg-video--no-scrub"> */
+/* Example: <div class="gg-video  gg-video--ad gg-video--no-scrub"> */
 
 .gg-video:hover.gg-video--no-scrub .gg-video--controls {
     transform: translateY(100%) translateY(-39px);
@@ -376,6 +388,10 @@ div.gg-video--progress-filled:hover::after {
 /* ISEV Video */
 /* Add class gg-video--isev */
 /* Example: <div class="gg-video  gg-video--isev"> */
+
+.gg-video.gg-video--isev .gg-video--top>.gg-video--item-left {
+    display: inherit;
+}
 
 
 .gg-video--isev .gg-video--controls {
