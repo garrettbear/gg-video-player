@@ -185,6 +185,13 @@
     margin: 6px;
 }
 
+.gg-video--button-icon.replay {
+    background-image: url(./icons/replay.svg);
+    height: 18px;
+    width: 16px;
+    margin: 6px;
+}
+
 .gg-video--button-icon.expand {
     background-image: url(./icons/expand.svg);
     height: 18px;
